@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MadLibs Form</title>
+</head>
+<body>
+    <h1>Welcome to Madlibs baby!!</h1>
+    <form action="/story">
+        {% for prompt in prompts %}
+        <p>{{prompt}} <input type="text" name="{{prompt}}"></p>
+        {% endfor %}
+
+        
+        <!-- <section>
+        <p>place<input type="text" name="place" id="place"></p>
+        <p><label for="noun">noun:</label>
+        <input type="text" name="noun" id="noun"></p>
+        <p><label for="adjective">adjective:</label>
+        <input type="text" name="adjective" id="adjective"></p>
+        <p><label for="plural_noun">plural noun:</label>
+        <input type="text" name="plural_noun" id="plural_noun"></p>
+        </section> -->
+        <button>Submit!</button>
+    </form>    
+    <form action="/story-2">
+        {% for prompt in new_prompts %}
+        <p>{{prompt}} <input type="text" name="{{prompt}}"></p>
+        {% endfor %}
+        <button>Submit!</button>
+    </form>
+</body>
+</html>
